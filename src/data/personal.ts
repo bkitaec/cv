@@ -13,7 +13,7 @@ At MI-C3, I lead the frontend team on a large-scale B2B enterprise platform "Aff
     '16 years of web development experience',
     'Frontend Team Lead at MI-C3 (6 years leading)',
     'Technical Co-founder/CTO at Reservble.com',
-    'Expert in React, Node.js, PostgreSQL, TypeScript',
+    'Expert in JS/ES6, React, Node.js, PostgreSQL',
   ],
 } as const
 

@@ -21,7 +21,6 @@ export const skillCategories: SkillCategory[] = [
       { name: 'Redux', level: 'expert' },
       { name: 'HTML5/CSS3', level: 'expert' },
       { name: 'JavaScript (ES6+)', level: 'expert' },
-      { name: 'Node.js', level: 'expert' },
 
     ],
   },
@@ -30,6 +29,7 @@ export const skillCategories: SkillCategory[] = [
     name: 'Backend',
     icon: 'Server',
     skills: [
+      { name: 'Node.js', level: 'expert' },
       { name: 'Express.js', level: 'expert' },
       { name: 'PostgreSQL', level: 'advanced' },
       { name: 'Redis', level: 'intermediate' },
