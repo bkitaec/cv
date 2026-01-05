@@ -14,9 +14,9 @@ const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
 }
 
 const levelColors = {
-  expert: 'bg-violet-500',
-  advanced: 'bg-violet-400',
-  intermediate: 'bg-violet-300',
+  expert: 'bg-white',
+  advanced: 'bg-white/80',
+  intermediate: 'bg-white/60',
 }
 
 const levelWidth = {
@@ -27,9 +27,9 @@ const levelWidth = {
 
 export function Skills() {
   return (
-    <Section id="skills" className="bg-gray-50/50 dark:bg-gray-900/50">
+    <Section id="skills" className="bg-gradient-to-br from-violet-700 to-violet-900">
       <Container>
-        <SectionTitle subtitle="Technologies I work with">
+        <SectionTitle subtitle="Technologies I work with" light>
           Skills & Expertise
         </SectionTitle>
 
@@ -37,14 +37,14 @@ export function Skills() {
           {skillCategories.map((category) => {
             const Icon = iconMap[category.icon]
             return (
-              <Card key={category.id} className="p-6">
+              <Card key={category.id} className="p-6" glass>
                 <div className="mb-4 flex items-center gap-3">
                   {Icon && (
-                    <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-violet-100 dark:bg-violet-900/30">
-                      <Icon className="h-5 w-5 text-violet-600 dark:text-violet-400" />
+                    <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-white/20">
+                      <Icon className="h-5 w-5 text-white" />
                     </div>
                   )}
-                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
+                  <h3 className="text-lg font-semibold text-white">
                     {category.name}
                   </h3>
                 </div>
@@ -53,14 +53,14 @@ export function Skills() {
                   {category.skills.map((skill) => (
                     <div key={skill.name}>
                       <div className="mb-1 flex items-center justify-between">
-                        <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
+                        <span className="text-sm font-medium text-white/90">
                           {skill.name}
                         </span>
-                        <span className="text-xs capitalize text-gray-500 dark:text-gray-400">
+                        <span className="text-xs capitalize text-white/70">
                           {skill.level}
                         </span>
                       </div>
-                      <div className="h-2 overflow-hidden rounded-full bg-gray-200 dark:bg-gray-700">
+                      <div className="h-2 overflow-hidden rounded-full bg-white/20">
                         <motion.div
                           initial={{ width: 0 }}
                           whileInView={{ width: '100%' }}

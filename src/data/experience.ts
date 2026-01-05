@@ -28,8 +28,9 @@ export const experiences: Experience[] = [
       'Participate in architectural decisions for new features',
       'Mentor junior developers and help them integrate into the team',
       'Work on core components and critical features',
+      'Write and maintain E2E automated tests with Playwright',
     ],
-    skills: ['React', 'TypeScript', 'Code Review', 'Team Leadership', 'Git'],
+    skills: ['React', 'GraphQL', 'Code Review', 'Team Leadership', 'Git', 'Playwright', 'E2E Testing'],
   },
   {
     id: 'reservble',
@@ -56,6 +57,7 @@ export const experiences: Experience[] = [
       'PostgreSQL',
       'Redis',
       'Payments',
+      'Google Actions',
     ],
   },
   {
@@ -73,7 +75,7 @@ export const experiences: Experience[] = [
       'Implemented new features and bug fixes',
       'Worked with complex data visualizations',
     ],
-    skills: ['React', 'Redux', 'JavaScript', 'Git', 'GitLab'],
+    skills: ['React', 'Redux', 'Flow', 'JavaScript', 'Git', 'GitLab'],
   },
   {
     id: 'wanderbeat',

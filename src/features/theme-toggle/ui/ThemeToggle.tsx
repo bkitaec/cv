@@ -21,7 +21,7 @@ export function ThemeToggle({ className }: ThemeToggleProps) {
     return (
       <button
         className={cn(
-          'rounded-lg p-2 text-gray-500 transition-colors hover:bg-gray-100 dark:hover:bg-gray-800',
+          'rounded-lg p-2 text-gray-600 transition-colors hover:bg-gray-200 dark:hover:bg-gray-800',
           className
         )}
         aria-label="Toggle theme"
@@ -35,7 +35,7 @@ export function ThemeToggle({ className }: ThemeToggleProps) {
     <button
       onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
       className={cn(
-        'rounded-lg p-2 text-gray-500 transition-colors hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-800',
+        'rounded-lg p-2 text-gray-600 transition-colors hover:bg-gray-200 dark:text-gray-400 dark:hover:bg-gray-800',
         className
       )}
       aria-label="Toggle theme"

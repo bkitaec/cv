@@ -20,7 +20,7 @@ export function MobileMenu({ className }: MobileMenuProps) {
     <div className={cn('md:hidden', className)}>
       <button
         onClick={toggleMenu}
-        className="rounded-lg p-2 text-gray-500 transition-colors hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-800"
+        className="rounded-lg p-2 text-gray-600 transition-colors hover:bg-gray-200 dark:text-gray-400 dark:hover:bg-gray-800"
         aria-label="Toggle menu"
         aria-expanded={isOpen}
       >
@@ -42,7 +42,7 @@ export function MobileMenu({ className }: MobileMenuProps) {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
               transition={{ duration: 0.2 }}
-              className="absolute left-4 right-4 top-full z-50 mt-2 rounded-xl border border-gray-200 bg-white p-4 shadow-lg dark:border-gray-800 dark:bg-gray-900"
+              className="absolute left-4 right-4 top-full z-50 mt-2 rounded-xl border border-gray-300 bg-white p-4 shadow-lg dark:border-gray-800 dark:bg-gray-900"
             >
               <ul className="space-y-1">
                 {siteConfig.navigation.map((item) => (
@@ -50,7 +50,7 @@ export function MobileMenu({ className }: MobileMenuProps) {
                     <a
                       href={item.href}
                       onClick={closeMenu}
-                      className="block rounded-lg px-4 py-3 text-base font-medium text-gray-700 transition-colors hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800"
+                      className="block rounded-lg px-4 py-3 text-base font-medium text-gray-800 transition-colors hover:bg-gray-200 dark:text-gray-300 dark:hover:bg-gray-800"
                     >
                       {item.name}
                     </a>

@@ -26,7 +26,7 @@ export function Projects() {
                     href={project.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="rounded-lg p-2 text-gray-500 transition-colors hover:bg-gray-100 hover:text-violet-600 dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-violet-400"
+                    className="rounded-lg p-2 text-gray-600 transition-colors hover:bg-gray-200 hover:text-violet-600 dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-violet-400"
                     aria-label={`Visit ${project.title}`}
                   >
                     <ExternalLink className="h-5 w-5" />
@@ -42,7 +42,7 @@ export function Projects() {
                 {project.role}
               </p>
 
-              <p className="mt-3 flex-grow text-gray-600 dark:text-gray-400">
+              <p className="mt-3 flex-grow text-gray-700 dark:text-gray-400">
                 {project.description}
               </p>
 
@@ -50,7 +50,7 @@ export function Projects() {
                 <h4 className="mb-2 text-sm font-semibold text-gray-900 dark:text-white">
                   Highlights
                 </h4>
-                <ul className="space-y-1 text-sm text-gray-600 dark:text-gray-400">
+                <ul className="space-y-1 text-sm text-gray-700 dark:text-gray-400">
                   {project.highlights.slice(0, 3).map((highlight, i) => (
                     <li key={i} className="flex items-start gap-2">
                       <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-violet-500" />
@@ -60,8 +60,8 @@ export function Projects() {
                 </ul>
               </div>
 
-              <div className="mt-4 flex flex-wrap gap-2 border-t border-gray-200 pt-4 dark:border-gray-800">
-                {project.tech.slice(0, 4).map((tech) => (
+              <div className="mt-4 flex flex-wrap gap-2 border-t border-gray-300 pt-4 dark:border-gray-800">
+                {project.tech.map((tech) => (
                   <span
                     key={tech}
                     className="rounded-full bg-gray-100 px-2.5 py-0.5 text-xs font-medium text-gray-700 dark:bg-gray-800 dark:text-gray-300"
@@ -69,11 +69,6 @@ export function Projects() {
                     {tech}
                   </span>
                 ))}
-                {project.tech.length > 4 && (
-                  <span className="rounded-full bg-gray-100 px-2.5 py-0.5 text-xs font-medium text-gray-500 dark:bg-gray-800 dark:text-gray-400">
-                    +{project.tech.length - 4}
-                  </span>
-                )}
               </div>
             </Card>
           ))}

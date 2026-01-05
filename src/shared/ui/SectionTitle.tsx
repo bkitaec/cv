@@ -7,16 +7,23 @@ interface SectionTitleProps {
   children: React.ReactNode
   className?: string
   subtitle?: string
+  light?: boolean
 }
 
-export function SectionTitle({ children, className, subtitle }: SectionTitleProps) {
+export function SectionTitle({ children, className, subtitle, light = false }: SectionTitleProps) {
   return (
     <motion.div variants={fadeInUp} className={cn('mb-12 text-center', className)}>
-      <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
+      <h2 className={cn(
+        'text-3xl font-bold tracking-tight sm:text-4xl',
+        light ? 'text-white' : 'text-violet-400'
+      )}>
         {children}
       </h2>
       {subtitle && (
-        <p className="mt-4 text-lg text-gray-600 dark:text-gray-400">{subtitle}</p>
+        <p className={cn(
+          'mt-4 text-lg',
+          light ? 'text-white/80' : 'text-gray-400'
+        )}>{subtitle}</p>
       )}
     </motion.div>
   )

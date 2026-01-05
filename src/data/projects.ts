@@ -16,7 +16,7 @@ export const projects: Project[] = [
     description:
       'Restaurant booking platform that enables customers to make reservations online and helps restaurants manage their bookings efficiently.',
     role: 'Technical CTO & Co-founder',
-    tech: ['React', 'Redux', 'Node.js', 'Express', 'PostgreSQL', 'Redis', 'Payments'],
+    tech: ['React', 'Redux', 'Node.js', 'Express', 'PostgreSQL', 'Redis', 'Payments', 'Google Actions'],
     highlights: [
       'Built entire platform architecture from scratch',
       'Implemented secure payment processing',
@@ -32,7 +32,7 @@ export const projects: Project[] = [
     description:
       'Enterprise drag-and-drop form builder for B2B project at MI-C3. Allows users to create complex forms with full customization.',
     role: 'Lead Developer',
-    tech: ['React', 'Redux', 'TypeScript', 'D&D API'],
+    tech: ['React', 'Redux', 'GraphQL',  'Flowable', 'bpmn.io', 'Bryntum', 'D&D API'],
     highlights: [
       'Developed from scratch as main developer',
       'Implemented complex drag & drop functionality',

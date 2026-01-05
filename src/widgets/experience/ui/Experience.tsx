@@ -39,7 +39,7 @@ export function Experience() {
                   </div>
                 )}
 
-                <div className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm transition-all hover:shadow-md dark:border-gray-800 dark:bg-gray-900">
+                <div className="rounded-xl border border-gray-300 bg-white p-6 shadow-sm transition-all hover:shadow-md dark:border-gray-800 dark:bg-gray-900">
                   <div className="mb-4 flex flex-wrap items-center gap-2">
                     {exp.current && (
                       <span className="rounded-full bg-green-100 px-2.5 py-0.5 text-xs font-medium text-green-700 dark:bg-green-900/30 dark:text-green-400">
@@ -55,7 +55,7 @@ export function Experience() {
                     {exp.role}
                   </h3>
 
-                  <div className="mt-2 flex flex-wrap items-center gap-4 text-sm text-gray-600 dark:text-gray-400">
+                  <div className="mt-2 flex flex-wrap items-center gap-4 text-sm text-gray-700 dark:text-gray-400">
                     <span className="flex items-center gap-1.5">
                       <Briefcase className="h-4 w-4" />
                       {exp.company}
@@ -70,7 +70,7 @@ export function Experience() {
                     </span>
                   </div>
 
-                  <p className="mt-4 text-gray-600 dark:text-gray-400">
+                  <p className="mt-4 text-gray-700 dark:text-gray-400">
                     {exp.description}
                   </p>
 
@@ -78,7 +78,7 @@ export function Experience() {
                     <h4 className="mb-2 text-sm font-semibold text-gray-900 dark:text-white">
                       Key Achievements
                     </h4>
-                    <ul className="space-y-1.5 text-sm text-gray-600 dark:text-gray-400">
+                    <ul className="space-y-1.5 text-sm text-gray-700 dark:text-gray-400">
                       {exp.achievements.slice(0, 3).map((achievement, i) => (
                         <li key={i} className="flex items-start gap-2">
                           <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-violet-500" />
@@ -89,7 +89,7 @@ export function Experience() {
                   </div>
 
                   <div className="mt-4 flex flex-wrap gap-2">
-                    {exp.skills.slice(0, 5).map((skill) => (
+                    {exp.skills.map((skill) => (
                       <span
                         key={skill}
                         className="rounded-full bg-gray-100 px-2.5 py-0.5 text-xs font-medium text-gray-700 dark:bg-gray-800 dark:text-gray-300"

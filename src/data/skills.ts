@@ -17,13 +17,12 @@ export const skillCategories: SkillCategory[] = [
     icon: 'Monitor',
     skills: [
       { name: 'React', level: 'expert' },
-      { name: 'TypeScript', level: 'expert' },
+      { name: 'TypeScript', level: 'intermediate' },
       { name: 'Redux', level: 'expert' },
-      { name: 'Next.js', level: 'advanced' },
-      { name: 'Tailwind CSS', level: 'advanced' },
       { name: 'HTML5/CSS3', level: 'expert' },
       { name: 'JavaScript (ES6+)', level: 'expert' },
-      { name: 'Framer Motion', level: 'intermediate' },
+      { name: 'Node.js', level: 'expert' },
+
     ],
   },
   {
@@ -31,12 +30,11 @@ export const skillCategories: SkillCategory[] = [
     name: 'Backend',
     icon: 'Server',
     skills: [
-      { name: 'Node.js', level: 'expert' },
       { name: 'Express.js', level: 'expert' },
       { name: 'PostgreSQL', level: 'advanced' },
-      { name: 'Redis', level: 'advanced' },
+      { name: 'Redis', level: 'intermediate' },
       { name: 'REST APIs', level: 'expert' },
-      { name: 'Sequelize', level: 'advanced' },
+      { name: 'Sequelize.js', level: 'advanced' },
       { name: 'MySQL', level: 'intermediate' },
     ],
   },
@@ -69,7 +67,6 @@ export const skillCategories: SkillCategory[] = [
 
 export const topSkills = [
   'React',
-  'TypeScript',
   'Node.js',
   'PostgreSQL',
   'Redux',
