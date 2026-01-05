@@ -4,15 +4,17 @@ import { motion } from 'framer-motion'
 import { ArrowDown, Github, Linkedin, Mail } from 'lucide-react'
 import { personal } from '@/data'
 import { fadeInUp, staggerContainer } from '@/shared/lib'
-import { Container, Button, AnimatedText } from '@/shared/ui'
+import { Container, Button, AnimatedText, ParticlesBackground } from '@/shared/ui'
 
 export function Hero() {
   return (
     <section className="relative flex min-h-screen items-center justify-center overflow-hidden pt-16">
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-violet-50/50 via-transparent to-transparent dark:from-violet-950/20" />
+      <ParticlesBackground />
 
-      <div className="pointer-events-none absolute -left-40 top-20 h-80 w-80 rounded-full bg-violet-200/30 blur-3xl dark:bg-violet-900/20" />
-      <div className="pointer-events-none absolute -right-40 bottom-20 h-80 w-80 rounded-full bg-violet-200/30 blur-3xl dark:bg-violet-900/20" />
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-violet-950/50 via-transparent to-transparent" />
+
+      <div className="pointer-events-none absolute -left-40 top-20 h-80 w-80 rounded-full bg-violet-900/30 blur-3xl" />
+      <div className="pointer-events-none absolute -right-40 bottom-20 h-80 w-80 rounded-full bg-violet-900/30 blur-3xl" />
 
       <Container className="relative z-10">
         <motion.div
