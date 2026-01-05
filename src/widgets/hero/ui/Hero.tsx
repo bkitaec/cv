@@ -1,15 +1,52 @@
 'use client'
 
-import { motion } from 'framer-motion'
+import { motion, useScroll, useTransform } from 'framer-motion'
 import { ArrowDown, Github, Linkedin, Mail } from 'lucide-react'
+import { useRef } from 'react'
 import { personal } from '@/data'
 import { fadeInUp, staggerContainer } from '@/shared/lib'
 import { Container, Button, AnimatedText, ParticlesBackground, OrbitRing, ShootingStar, GlowingOrb } from '@/shared/ui'
 
 export function Hero() {
+  const sectionRef = useRef<HTMLElement>(null)
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ['start start', 'end start'],
+  })
+
+  // Sun glow intensity based on scroll
+  const sunScale = useTransform(scrollYProgress, [0, 0.5], [1, 2.5])
+  const sunOpacity = useTransform(scrollYProgress, [0, 0.3, 0.5], [0.3, 0.8, 1])
+  const sunBlur = useTransform(scrollYProgress, [0, 0.5], [20, 80])
+  const rayOpacity = useTransform(scrollYProgress, [0, 0.3], [0, 1])
+
   return (
-    <section className="relative flex min-h-screen items-center justify-center overflow-hidden pt-16">
+    <section ref={sectionRef} className="relative flex min-h-screen items-center justify-center overflow-hidden pt-16">
       <ParticlesBackground />
+
+      {/* Rising Sun effect - appears on scroll */}
+      <motion.div
+        className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
+        style={{ scale: sunScale }}
+      >
+        {/* Sun core glow */}
+        <motion.div
+          className="h-64 w-64 rounded-full bg-gradient-to-br from-yellow-300 via-orange-400 to-red-500"
+          style={{
+            opacity: sunOpacity,
+            filter: useTransform(sunBlur, (v) => `blur(${v}px)`),
+          }}
+        />
+        {/* Sun rays */}
+        <motion.div
+          className="absolute inset-0 rounded-full"
+          style={{
+            opacity: rayOpacity,
+            background: 'radial-gradient(circle, rgba(255,200,100,0.4) 0%, rgba(255,150,50,0.2) 40%, transparent 70%)',
+            filter: 'blur(30px)',
+          }}
+        />
+      </motion.div>
 
       {/* Shooting stars */}
       <ShootingStar className="left-1/4 top-1/4 w-32" />
@@ -37,11 +74,20 @@ export function Hero() {
             <OrbitRing className="absolute left-1/2 top-1/2 h-44 w-44 -translate-x-1/2 -translate-y-1/2" />
             <OrbitRing className="absolute left-1/2 top-1/2 h-56 w-56 -translate-x-1/2 -translate-y-1/2" />
 
-            {/* Avatar */}
-            <div className="relative flex h-32 w-32 items-center justify-center rounded-full bg-gradient-to-br from-violet-500 to-violet-700 text-4xl font-bold text-white shadow-lg shadow-violet-500/25">
+            {/* Avatar with scroll-based glow */}
+            <motion.div
+              className="relative flex h-32 w-32 items-center justify-center rounded-full bg-gradient-to-br from-violet-500 to-violet-700 text-4xl font-bold text-white shadow-lg"
+              style={{
+                boxShadow: useTransform(
+                  scrollYProgress,
+                  [0, 0.3],
+                  ['0 10px 40px -10px rgba(139, 92, 246, 0.3)', '0 10px 60px -10px rgba(255, 180, 100, 0.5)']
+                ),
+              }}
+            >
               <div className="absolute inset-0 rounded-full bg-gradient-to-br from-white/20 to-transparent" />
               DB
-            </div>
+            </motion.div>
           </motion.div>
 
           <motion.div variants={fadeInUp}>
