@@ -1,6 +1,6 @@
 'use client'
 
-import { motion } from ',n'
+import { motion } from 'framer-motion'
 import { cn, fadeInUp } from '@/shared/lib'
 
 interface CardProps {
