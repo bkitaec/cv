@@ -4,17 +4,22 @@ import { motion } from 'framer-motion'
 import { ArrowDown, Github, Linkedin, Mail } from 'lucide-react'
 import { personal } from '@/data'
 import { fadeInUp, staggerContainer } from '@/shared/lib'
-import { Container, Button, AnimatedText, ParticlesBackground } from '@/shared/ui'
+import { Container, Button, AnimatedText, ParticlesBackground, OrbitRing, ShootingStar, GlowingOrb } from '@/shared/ui'
 
 export function Hero() {
   return (
     <section className="relative flex min-h-screen items-center justify-center overflow-hidden pt-16">
       <ParticlesBackground />
 
+      {/* Shooting stars */}
+      <ShootingStar className="left-1/4 top-1/4 w-32" />
+      <ShootingStar className="right-1/3 top-1/3 w-24 delay-1000" />
+
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-violet-950/50 via-transparent to-transparent" />
 
-      <div className="pointer-events-none absolute -left-40 top-20 h-80 w-80 rounded-full bg-violet-900/30 blur-3xl" />
-      <div className="pointer-events-none absolute -right-40 bottom-20 h-80 w-80 rounded-full bg-violet-900/30 blur-3xl" />
+      {/* Glowing orbs */}
+      <GlowingOrb className="-left-40 top-20 h-80 w-80" />
+      <GlowingOrb className="-right-40 bottom-20 h-80 w-80" color="purple" />
 
       <Container className="relative z-10">
         <motion.div
@@ -23,11 +28,20 @@ export function Hero() {
           animate="show"
           className="flex flex-col items-center text-center"
         >
+          {/* Avatar with orbit rings */}
           <motion.div
             variants={fadeInUp}
-            className="mb-6 flex h-32 w-32 items-center justify-center rounded-full bg-gradient-to-br from-violet-500 to-violet-700 text-4xl font-bold text-white shadow-lg shadow-violet-500/25"
+            className="relative mb-6 flex items-center justify-center"
           >
-            DB
+            {/* Orbits centered around avatar */}
+            <OrbitRing className="absolute left-1/2 top-1/2 h-44 w-44 -translate-x-1/2 -translate-y-1/2" />
+            <OrbitRing className="absolute left-1/2 top-1/2 h-56 w-56 -translate-x-1/2 -translate-y-1/2" />
+
+            {/* Avatar */}
+            <div className="relative flex h-32 w-32 items-center justify-center rounded-full bg-gradient-to-br from-violet-500 to-violet-700 text-4xl font-bold text-white shadow-lg shadow-violet-500/25">
+              <div className="absolute inset-0 rounded-full bg-gradient-to-br from-white/20 to-transparent" />
+              DB
+            </div>
           </motion.div>
 
           <motion.div variants={fadeInUp}>

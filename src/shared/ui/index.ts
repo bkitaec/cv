@@ -5,3 +5,14 @@ export { Button } from './Button'
 export { Card } from './Card'
 export { AnimatedText } from './AnimatedText'
 export { ParticlesBackground } from './ParticlesBackground'
+export {
+  OrbitRing,
+  StarBurst,
+  ConstellationDots,
+  GlowingOrb,
+  HexagonPattern,
+  ShootingStar,
+  PlanetRing,
+  NebulaCloud,
+  Sparkle,
+} from './AstroDecorations'

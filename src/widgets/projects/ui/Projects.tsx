@@ -1,36 +1,54 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { ExternalLink, Folder } from 'lucide-react'
+import { ExternalLink, Folder, Rocket } from 'lucide-react'
 import { projects } from '@/data'
 import { fadeInUp } from '@/shared/lib'
-import { Container, Section, SectionTitle, Card } from '@/shared/ui'
+import { Container, Section, SectionTitle, Card, GlowingOrb, Sparkle } from '@/shared/ui'
 
 export function Projects() {
   return (
-    <Section id="projects">
-      <Container>
+    <Section id="projects" className="relative overflow-hidden">
+      {/* Background decorations */}
+      <GlowingOrb className="absolute -left-60 top-1/4 h-96 w-96 opacity-20" color="purple" />
+      <GlowingOrb className="absolute -right-60 bottom-1/4 h-80 w-80 opacity-15" />
+
+      <Container className="relative">
         <SectionTitle subtitle="Featured work and side projects">
           Projects
         </SectionTitle>
 
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {projects.map((project) => (
-            <Card key={project.id} className="flex flex-col">
+          {projects.map((project, index) => (
+            <Card key={project.id} className="group relative flex flex-col overflow-hidden">
+              {/* Animated sparkle on hover */}
+              <Sparkle
+                className="absolute -right-2 -top-2 h-6 w-6 text-violet-400 opacity-0 transition-opacity group-hover:opacity-100"
+                delay={index * 0.2}
+              />
+
               <div className="mb-4 flex items-center justify-between">
-                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-violet-100 dark:bg-violet-900/30">
+                <motion.div
+                  className="relative flex h-12 w-12 items-center justify-center rounded-lg bg-gradient-to-br from-violet-100 to-violet-200 dark:from-violet-900/30 dark:to-violet-800/30"
+                  whileHover={{ scale: 1.1, rotate: 5 }}
+                  transition={{ type: 'spring', stiffness: 300 }}
+                >
                   <Folder className="h-6 w-6 text-violet-600 dark:text-violet-400" />
-                </div>
+                  {/* Glow effect */}
+                  <div className="absolute inset-0 rounded-lg bg-violet-500/20 opacity-0 blur-md transition-opacity group-hover:opacity-100" />
+                </motion.div>
                 {project.link && (
-                  <a
+                  <motion.a
                     href={project.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="rounded-lg p-2 text-gray-600 transition-colors hover:bg-gray-200 hover:text-violet-600 dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-violet-400"
+                    className="flex items-center gap-1.5 rounded-lg p-2 text-gray-600 transition-colors hover:bg-violet-100 hover:text-violet-600 dark:text-gray-400 dark:hover:bg-violet-900/30 dark:hover:text-violet-400"
                     aria-label={`Visit ${project.title}`}
+                    whileHover={{ x: 3 }}
                   >
                     <ExternalLink className="h-5 w-5" />
-                  </a>
+                    <Rocket className="h-3 w-3 opacity-0 transition-opacity group-hover:opacity-100" />
+                  </motion.a>
                 )}
               </div>
 
