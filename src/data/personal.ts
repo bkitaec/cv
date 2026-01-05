@@ -1,20 +1,24 @@
 export const personal = {
   name: 'Denys Bogdanov',
   title: 'Full-Stack JavaScript Developer & Technical Leader',
-  tagline: '16 years in web development, 10 years specializing in JavaScript ecosystems',
+  tagline: 'Building software and learning something new every day',
   location: 'Ukraine (Remote)',
-  bio: `Full-Stack JavaScript Developer and Technical Leader with 16 years in web development and 10 years specializing in JavaScript ecosystems. Currently serving dual roles: Frontend Team Lead at MI-C3 International (8 years total, 6 as lead) and Technical Co-founder/CTO at Reservble.com — a reservation platform I've built and scaled from the ground up.
+  bio: `I've spent 16 years building software and helping teams do the same. Currently wearing two hats: Frontend Team Lead at MI-C3 International and Technical Co-founder at Reservble.com — a reservation platform I've built from scratch.
 
-At MI-C3, I lead the frontend team on a large-scale B2B enterprise platform "Affectli". Key contributions include architecting a drag-and-drop Form Builder from scratch, establishing code review standards, mentoring developers, and driving technical discussions on new features.`,
+What drives me? The endless curiosity to learn. I dive deep into new AI technologies, explore every Claude feature, and stay on top of emerging trends. I believe the best developers never stop being students.`,
+  extendedBio: `At MI-C3, I lead the frontend team on "Affectli" — a large-scale B2B enterprise platform. My proudest achievements include architecting a drag-and-drop Form Builder from scratch, establishing code review culture, and mentoring the next generation of developers.
+
+When I'm not coding, I'm probably experimenting with the latest AI tools or reading about what's coming next in tech.`,
   email: 'pranaboy13@gmail.com',
   linkedin: 'https://linkedin.com/in/bkitaec',
   github: 'https://github.com/bkitaec',
   highlights: [
-    '16 years of web development experience',
-    'Frontend Team Lead at MI-C3 (6 years leading)',
-    'Technical Co-founder/CTO at Reservble.com',
-    'Expert in JS/ES6, React, Node.js, PostgreSQL',
+    '16 years crafting web experiences',
+    'Leading teams & mentoring developers',
+    'AI enthusiast & continuous learner',
+    'From idea to production — full cycle',
   ],
+  philosophy: 'Always learning. Always building. Always curious.',
 } as const
 
 export type Personal = typeof personal
