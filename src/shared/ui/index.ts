@@ -5,6 +5,7 @@ export { Button } from './Button'
 export { Card } from './Card'
 export { AnimatedText } from './AnimatedText'
 export { ParticlesBackground } from './ParticlesBackground'
+export { AIBadge } from './AIBadge'
 export {
   OrbitRing,
   StarBurst,

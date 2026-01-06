@@ -5,7 +5,7 @@ import { ArrowDown, Github, Linkedin, Mail } from 'lucide-react'
 import { useRef } from 'react'
 import { personal } from '@/data'
 import { fadeInUp, staggerContainer } from '@/shared/lib'
-import { Container, Button, AnimatedText, ParticlesBackground, OrbitRing, ShootingStar, GlowingOrb } from '@/shared/ui'
+import { Container, Button, AnimatedText, ParticlesBackground, OrbitRing, ShootingStar, GlowingOrb, AIBadge } from '@/shared/ui'
 
 export function Hero() {
   const sectionRef = useRef<HTMLElement>(null)
@@ -104,6 +104,10 @@ export function Hero() {
           >
             {personal.title}
           </motion.p>
+
+          <motion.div variants={fadeInUp} className="mt-4">
+            <AIBadge size="lg" />
+          </motion.div>
 
           <motion.p
             variants={fadeInUp}

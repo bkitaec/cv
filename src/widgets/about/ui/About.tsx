@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { CheckCircle2, Quote, Sparkles, Telescope } from 'lucide-react'
+import { CheckCircle2, Quote, Sparkles, Telescope, Bot } from 'lucide-react'
 import { personal } from '@/data'
 import { fadeInUp } from '@/shared/lib'
 import { Container, Section, SectionTitle, ConstellationDots, PlanetRing, Sparkle } from '@/shared/ui'
@@ -86,11 +86,33 @@ export function About() {
               </ul>
             </div>
 
+            {/* AI Development card */}
+            <div className="group relative rounded-xl border border-emerald-400/30 bg-gradient-to-br from-emerald-500/20 to-cyan-500/20 p-6 backdrop-blur-sm transition-all hover:from-emerald-500/30 hover:to-cyan-500/30">
+              <motion.div
+                className="absolute -left-4 -top-4 h-16 w-16 rounded-full bg-emerald-400/20"
+                animate={{ scale: [1, 1.2, 1] }}
+                transition={{ duration: 4, repeat: Infinity }}
+              />
+              <Sparkle className="absolute -right-2 -top-2 h-5 w-5 text-emerald-300" delay={0.5} />
+
+              <div className="relative">
+                <div className="mb-3 flex items-center gap-2">
+                  <Bot className="h-5 w-5 text-emerald-300" />
+                  <h3 className="text-lg font-semibold text-white">
+                    AI-Powered Development
+                  </h3>
+                </div>
+                <p className="text-white/80">
+                  {personal.aiStatement} I leverage AI tools to accelerate development while maintaining high code quality and best practices.
+                </p>
+              </div>
+            </div>
+
             {/* Currently Exploring card */}
             <div className="group relative rounded-xl border border-white/20 bg-white/10 p-6 backdrop-blur-sm transition-all hover:bg-white/15">
               <motion.div
                 className="absolute -left-4 -top-4 h-16 w-16 rounded-full bg-white/10"
-                animate={{ scale: [1, 1.2, 1] }}
+                animate={{ scale: [1, 1.2, 1], opacity: [0.5, 0.8, 0.5] }}
                 transition={{ duration: 4, repeat: Infinity }}
               />
 
@@ -102,7 +124,7 @@ export function About() {
                   </h3>
                 </div>
                 <p className="text-white/80">
-                  AI-assisted development, Claude API & features, modern DevOps practices, and ways to make development teams more effective.
+                  Claude API integrations, AI agent development, modern DevOps practices, and ways to make development teams more effective through AI collaboration.
                 </p>
               </div>
             </div>
