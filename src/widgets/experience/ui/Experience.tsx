@@ -1,10 +1,12 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Briefcase, MapPin, Calendar } from 'lucide-react'
+import { Briefcase, MapPin, Calendar, Bot } from 'lucide-react'
 import { experiences } from '@/data'
 import { fadeInUp } from '@/shared/lib'
 import { Container, Section, SectionTitle, ConstellationDots, NebulaCloud } from '@/shared/ui'
+
+const AI_SKILLS = ['Claude AI', 'AI-Assisted Development', 'Playwright']
 
 export function Experience() {
   return (
@@ -115,14 +117,22 @@ export function Experience() {
                   </div>
 
                   <div className="mt-4 flex flex-wrap gap-2">
-                    {exp.skills.map((skill) => (
-                      <span
-                        key={skill}
-                        className="rounded-full bg-gray-100 px-2.5 py-0.5 text-xs font-medium text-gray-700 dark:bg-gray-800 dark:text-gray-300"
-                      >
-                        {skill}
-                      </span>
-                    ))}
+                    {exp.skills.map((skill) => {
+                      const isAI = AI_SKILLS.includes(skill)
+                      return (
+                        <span
+                          key={skill}
+                          className={
+                            isAI
+                              ? 'flex items-center gap-1 rounded-full bg-gradient-to-r from-emerald-500/20 to-cyan-500/20 px-2.5 py-0.5 text-xs font-medium text-emerald-600 dark:text-emerald-400 border border-emerald-500/30'
+                              : 'rounded-full bg-gray-100 px-2.5 py-0.5 text-xs font-medium text-gray-700 dark:bg-gray-800 dark:text-gray-300'
+                          }
+                        >
+                          {isAI && <Bot className="h-3 w-3" />}
+                          {skill}
+                        </span>
+                      )
+                    })}
                   </div>
                 </div>
               </motion.div>

@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Monitor, Server, Wrench, Users } from 'lucide-react'
+import { Monitor, Server, Wrench, Users, Bot, TestTube } from 'lucide-react'
 import { skillCategories } from '@/data'
 import { fadeInUp, cn } from '@/shared/lib'
 import { Container, Section, SectionTitle, Card, HexagonPattern, OrbitRing } from '@/shared/ui'
@@ -11,6 +11,8 @@ const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   Server,
   Wrench,
   Users,
+  Bot,
+  TestTube,
 }
 
 const levelColors = {

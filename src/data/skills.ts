@@ -63,12 +63,35 @@ export const skillCategories: SkillCategory[] = [
       { name: 'Agile/Scrum', level: 'advanced' },
     ],
   },
+  {
+    id: 'ai',
+    name: 'AI & Automation',
+    icon: 'Bot',
+    skills: [
+      { name: 'Claude Code CLI', level: 'expert' },
+      { name: 'Claude Subagents', level: 'expert' },
+      { name: 'MCP Servers', level: 'advanced' },
+      { name: 'Prompt Engineering', level: 'expert' },
+      { name: 'AI-Assisted Development', level: 'expert' },
+    ],
+  },
+  {
+    id: 'testing',
+    name: 'Testing & QA',
+    icon: 'TestTube',
+    skills: [
+      { name: 'Playwright E2E', level: 'advanced' },
+      { name: 'Test Automation', level: 'advanced' },
+      { name: 'Jest', level: 'intermediate' },
+      { name: 'Mocha', level: 'intermediate' },
+    ],
+  },
 ]
 
 export const topSkills = [
   'React',
   'Node.js',
-  'PostgreSQL',
-  'Redux',
+  'Claude AI',
+  'GraphQL',
   'Team Leadership',
 ]
