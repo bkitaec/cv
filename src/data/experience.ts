@@ -21,14 +21,14 @@ export const experiences: Experience[] = [
     type: 'full-time',
     current: true,
     description:
-      'Leading front-end development team on enterprise B2B platform "Affectli". Architecting complex features, conducting code reviews, and pioneering AI-assisted development practices.',
+      'Leading front-end development team on Affectli — an ontology-based enterprise platform for real-time operations — and on ComplyRespond.ai, an AI-driven GRC product built on top of it. Architecting complex features, conducting code reviews, and pioneering AI-assisted development practices.',
     achievements: [
       'Lead a team of front-end developers on enterprise-scale projects',
       'Architected Form Builder with 50+ field types and drag-and-drop functionality',
       'Built GraphQL architecture: 350+ operations with Apollo Client & WebSocket subscriptions',
       'Implemented BPMN Process Designer for visual workflow editing',
       'Integrated Bryntum Grid/Gantt for enterprise dashboards and data visualization',
-      'Pioneered AI-assisted development: Mi-Comply project 95% built with Claude',
+      'Pioneered AI-assisted development: ComplyRespond.ai built ~95% with Claude, now on v2',
       'Write and maintain E2E automated tests with Playwright',
       'Mentor developers and conduct architectural code reviews',
     ],
@@ -43,13 +43,15 @@ export const experiences: Experience[] = [
     type: 'self-employed',
     current: true,
     description:
-      'Co-founder and Technical CTO responsible for system architecture, API design, and end-to-end product delivery.',
+      'Co-founder and Technical CTO. I own the technical strategy, system architecture, and end-to-end product delivery across frontend, backend, and core platform services.',
     achievements: [
       'Designed and built the entire platform architecture',
       'Implemented payment integrations and booking system',
       'Developed REST APIs and database optimization',
       'Ensured platform reliability, performance, and scalability',
-      'Integrated Google Actions for voice-enabled bookings',
+      'Built POS integration with Syrve and venue data via Places API',
+      'Built an AI operations agent for diagnostics, tenant configuration and approval-controlled changes',
+      'Set up observability, incident response and secure release processes',
     ],
     skills: [
       'React',
@@ -59,7 +61,8 @@ export const experiences: Experience[] = [
       'PostgreSQL',
       'Redis',
       'Payments',
-      'Google Actions',
+      'Syrve',
+      'Claude AI',
     ],
   },
   {

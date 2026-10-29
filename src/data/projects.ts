@@ -16,11 +16,12 @@ export const projects: Project[] = [
     description:
       'Restaurant booking platform that enables customers to make reservations online and helps restaurants manage their bookings efficiently.',
     role: 'Technical CTO & Co-founder',
-    tech: ['React', 'Redux', 'Node.js', 'Express', 'PostgreSQL', 'Redis', 'Payments', 'Google Actions'],
+    tech: ['React', 'Redux', 'Node.js', 'Express', 'PostgreSQL', 'Redis', 'Payments', 'Syrve', 'Claude AI'],
     highlights: [
       'Built entire platform architecture from scratch',
       'Implemented secure payment processing',
-      'Integrated Google Actions for voice bookings',
+      'Integrated Syrve POS and Places API',
+      'AI operations agent for diagnostics and configuration',
       'Designed scalable database architecture',
       'Achieved high platform reliability',
     ],

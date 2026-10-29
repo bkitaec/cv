@@ -52,7 +52,7 @@ export function Hero() {
       <ShootingStar className="left-1/4 top-1/4 w-32" />
       <ShootingStar className="right-1/3 top-1/3 w-24 delay-1000" />
 
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-violet-950/50 via-transparent to-transparent" />
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-violet-200/60 via-transparent dark:from-violet-950/50 to-transparent" />
 
       {/* Glowing orbs */}
       <GlowingOrb className="-left-40 top-20 h-80 w-80" />
@@ -94,13 +94,13 @@ export function Hero() {
             <AnimatedText
               text={personal.name}
               as="h1"
-              className="text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl"
+              className="text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-5xl md:text-6xl"
             />
           </motion.div>
 
           <motion.p
             variants={fadeInUp}
-            className="mt-4 text-xl font-medium text-violet-400 sm:text-2xl"
+            className="mt-4 text-xl font-medium text-violet-700 dark:text-violet-400 sm:text-2xl"
           >
             {personal.title}
           </motion.p>
@@ -111,7 +111,7 @@ export function Hero() {
 
           <motion.p
             variants={fadeInUp}
-            className="mt-4 max-w-2xl text-lg text-gray-300"
+            className="mt-4 max-w-2xl text-lg text-gray-700 dark:text-gray-300"
           >
             {personal.tagline}
           </motion.p>
@@ -136,7 +136,7 @@ export function Hero() {
               href={personal.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-full p-2 text-gray-400 transition-colors hover:bg-gray-800 hover:text-white"
+              className="rounded-full p-2 text-gray-600 transition-colors hover:bg-gray-200 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-white"
               aria-label="GitHub"
             >
               <Github className="h-6 w-6" />
@@ -145,14 +145,14 @@ export function Hero() {
               href={personal.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-full p-2 text-gray-400 transition-colors hover:bg-gray-800 hover:text-white"
+              className="rounded-full p-2 text-gray-600 transition-colors hover:bg-gray-200 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-white"
               aria-label="LinkedIn"
             >
               <Linkedin className="h-6 w-6" />
             </a>
             <a
               href={`mailto:${personal.email}`}
-              className="rounded-full p-2 text-gray-400 transition-colors hover:bg-gray-800 hover:text-white"
+              className="rounded-full p-2 text-gray-600 transition-colors hover:bg-gray-200 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-white"
               aria-label="Email"
             >
               <Mail className="h-6 w-6" />
@@ -165,7 +165,7 @@ export function Hero() {
           >
             <a
               href="#about"
-              className="flex flex-col items-center gap-2 text-sm text-gray-400 transition-colors hover:text-violet-400"
+              className="flex flex-col items-center gap-2 text-sm text-gray-600 transition-colors hover:text-violet-700 dark:text-gray-400 dark:hover:text-violet-400"
             >
               <span>Scroll to explore</span>
               <motion.div

@@ -5,6 +5,7 @@ export interface MIC3Project {
   description: string
   highlights: string[]
   tech: string[]
+  link?: string
   aiPowered?: boolean
   aiPercentage?: number
 }
@@ -12,17 +13,18 @@ export interface MIC3Project {
 export const mic3Projects: MIC3Project[] = [
   {
     id: 'platform-v1',
-    name: 'Platform V1 (Affectli)',
+    name: 'Affectli Platform',
     period: '2018 - Present',
     description:
-      'Enterprise B2B platform for process management, task automation, and data visualization. Built complex features from scratch working closely with backend team.',
+      'Ontology-based "Business Operating System" that unifies legacy systems, IoT devices and data streams into a real-time single pane of glass. Used in oil & gas, telecom, mining, utilities and security operations.',
     highlights: [
       'Architected Form Builder with 50+ field types and drag-and-drop',
       'Built GraphQL architecture: 350+ operations with Apollo Client',
-      'Implemented BPMN Process Designer for visual workflow editing',
-      'Integrated Bryntum Grid/Gantt for enterprise dashboards',
-      'Real-time chat integration via Rocket.Chat API & WebSockets',
-      'Geospatial features: OpenLayers + Cesium 3D mapping',
+      'Implemented BPMN Process Designer for workflow automation',
+      'Integrated Bryntum Grid/Gantt for task management and dashboards',
+      'Real-time messaging & broadcasts via Rocket.Chat API & WebSockets',
+      'GIS maps, heat maps and custom layers: OpenLayers + Cesium 3D',
+      'Multi-tenant teams, workspaces and granular permissions UI',
       'Performance optimization: Rspack bundler, code splitting',
     ],
     tech: [
@@ -35,20 +37,23 @@ export const mic3Projects: MIC3Project[] = [
       'WebSocket',
       'OpenLayers',
     ],
+    link: 'https://affectli.com',
   },
   {
-    id: 'mi-comply',
-    name: 'Mi-Comply Frontend',
-    period: '2024 - 2025',
+    id: 'comply-respond',
+    name: 'ComplyRespond.ai (Mi-Comply)',
+    period: '2024 - Present',
     description:
-      'Multi-tenant Third Party Risk Management (TPRM) platform. White-labeled Form-as-a-Service solution built from scratch.',
+      'Intelligent GRC platform that collects cyber data, maps it to compliance frameworks and tells teams what to fix first. Built from scratch on top of Affectli, now in its second major version.',
     aiPowered: true,
     aiPercentage: 95,
     highlights: [
-      '95% of codebase built using Claude AI',
-      'Multi-tenant architecture with URL-based tenant detection',
-      'Dynamic Form Builder for TPRM questionnaires',
-      'Role-based access control with protected routes',
+      '~95% of the v1 codebase built using Claude AI',
+      'Shipped v2: Brain knowledge base, Risk Surfaces, Compliance & Reporting workspaces',
+      'AI Guidance & Priorities: remediation ranked by criticality',
+      'Multi-tenant, white-labeled architecture with URL-based tenant detection',
+      'Dynamic Form Builder for third-party risk questionnaires',
+      'Role-based access control, SSO and protected routes',
       'Comprehensive Playwright E2E testing suite',
       'TypeScript strict mode with zero any types',
     ],
@@ -62,5 +67,6 @@ export const mic3Projects: MIC3Project[] = [
       'Playwright',
       'Claude AI',
     ],
+    link: 'https://complyrespond.ai',
   },
 ]

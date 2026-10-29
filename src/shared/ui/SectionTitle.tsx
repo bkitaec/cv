@@ -47,7 +47,7 @@ export function SectionTitle({ children, className, subtitle, light = false }: S
 
         <h2 className={cn(
           'relative text-3xl font-bold tracking-tight sm:text-4xl',
-          light ? 'text-white' : 'text-violet-400'
+          light ? 'text-white' : 'text-violet-700 dark:text-violet-400'
         )}>
           {children}
         </h2>
@@ -56,7 +56,7 @@ export function SectionTitle({ children, className, subtitle, light = false }: S
       {subtitle && (
         <p className={cn(
           'mt-4 text-lg',
-          light ? 'text-white/80' : 'text-gray-400'
+          light ? 'text-white/80' : 'text-gray-600 dark:text-gray-400'
         )}>{subtitle}</p>
       )}
 

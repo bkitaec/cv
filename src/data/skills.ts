@@ -17,11 +17,11 @@ export const skillCategories: SkillCategory[] = [
     icon: 'Monitor',
     skills: [
       { name: 'React', level: 'expert' },
-      { name: 'TypeScript', level: 'intermediate' },
+      { name: 'TypeScript', level: 'advanced' },
       { name: 'Redux', level: 'expert' },
       { name: 'HTML5/CSS3', level: 'expert' },
       { name: 'JavaScript (ES6+)', level: 'expert' },
-
+      { name: 'GraphQL / Apollo', level: 'expert' },
     ],
   },
   {

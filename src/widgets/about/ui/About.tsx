@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { CheckCircle2, Quote, Sparkles, Telescope, Bot } from 'lucide-react'
+import { CheckCircle2, Quote, Sparkles, Telescope, Bot, GraduationCap, Languages } from 'lucide-react'
 import { personal } from '@/data'
 import { fadeInUp } from '@/shared/lib'
 import { Container, Section, SectionTitle, ConstellationDots, PlanetRing, Sparkle } from '@/shared/ui'
@@ -126,6 +126,31 @@ export function About() {
                 <p className="text-white/80">
                   Claude API integrations, AI agent development, modern DevOps practices, and ways to make development teams more effective through AI collaboration.
                 </p>
+              </div>
+            </div>
+
+            {/* Education & Languages card */}
+            <div className="group relative rounded-xl border border-white/20 bg-white/10 p-6 backdrop-blur-sm transition-all hover:bg-white/15">
+              <div className="mb-3 flex items-center gap-2">
+                <GraduationCap className="h-5 w-5 text-white/80" />
+                <h3 className="text-lg font-semibold text-white">
+                  Education & Languages
+                </h3>
+              </div>
+              <p className="font-medium text-white">{personal.education.degree}</p>
+              <p className="text-sm text-white/70">
+                {personal.education.school} · {personal.education.period}
+              </p>
+              <div className="mt-4 flex flex-wrap gap-2">
+                {personal.languages.map((language) => (
+                  <span
+                    key={language.name}
+                    className="flex items-center gap-1.5 rounded-full border border-white/20 bg-white/10 px-3 py-1 text-xs font-medium text-white/90"
+                  >
+                    <Languages className="h-3 w-3" />
+                    {language.name} · {language.level}
+                  </span>
+                ))}
               </div>
             </div>
           </motion.div>

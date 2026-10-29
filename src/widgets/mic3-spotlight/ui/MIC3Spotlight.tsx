@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Building2, Bot, Cpu, Workflow, Database, MessageSquare, Layers, TestTube, Sparkles } from 'lucide-react'
+import { Building2, Bot, ExternalLink, Cpu, Workflow, Database, MessageSquare, Layers, TestTube, Sparkles } from 'lucide-react'
 import { mic3Projects } from '@/data'
 import { fadeInUp } from '@/shared/lib'
 import { Container, Section, SectionTitle, OrbitRing, GlowingOrb, Sparkle } from '@/shared/ui'
@@ -18,6 +18,8 @@ const techIcons: Record<string, React.ComponentType<{ className?: string }>> = {
   TypeScript: Cpu,
 }
 
+const yearsAtMIC3 = new Date().getFullYear() - 2018
+
 export function MIC3Spotlight() {
   return (
     <Section id="mic3" className="relative overflow-hidden bg-gradient-to-br from-violet-700 via-violet-800 to-violet-900">
@@ -27,7 +29,7 @@ export function MIC3Spotlight() {
       <GlowingOrb className="absolute left-1/4 top-1/2 h-40 w-40 -translate-y-1/2 opacity-20" color="purple" />
 
       <Container className="relative">
-        <SectionTitle subtitle="6 years of building enterprise solutions" light>
+        <SectionTitle subtitle={`${yearsAtMIC3}+ years of building enterprise solutions`} light>
           MI-C3 Spotlight
         </SectionTitle>
 
@@ -85,6 +87,17 @@ export function MIC3Spotlight() {
                       {project.name}
                     </h3>
                     <p className="mt-1 text-sm text-white/60">{project.period}</p>
+                    {project.link && (
+                      <a
+                        href={project.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="mt-1 inline-flex items-center gap-1 text-sm text-violet-200 hover:text-white"
+                      >
+                        {project.link.replace('https://', '')}
+                        <ExternalLink className="h-3 w-3" />
+                      </a>
+                    )}
                   </div>
                 </div>
 
@@ -155,8 +168,8 @@ export function MIC3Spotlight() {
           </div>
           <p className="text-white/80">
             I leverage AI tools like Claude to accelerate development while maintaining high code quality.
-            Mi-Comply demonstrates that AI-human collaboration can deliver production-ready enterprise
-            solutions efficiently. The future of development is augmented by AI.
+            ComplyRespond.ai demonstrates that AI-human collaboration can deliver production-ready enterprise
+            solutions efficiently — and keep evolving them into a second major version. The future of development is augmented by AI.
           </p>
         </motion.div>
       </Container>
