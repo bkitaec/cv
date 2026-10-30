@@ -14,6 +14,7 @@ const techIcons: Record<string, React.ComponentType<{ className?: string }>> = {
   Bryntum: Layers,
   WebSocket: MessageSquare,
   'Claude AI': Bot,
+  Keycloak: Cpu,
   Playwright: TestTube,
   TypeScript: Cpu,
 }
@@ -37,9 +38,9 @@ export function MIC3Spotlight() {
           variants={fadeInUp}
           className="mx-auto mb-12 max-w-3xl text-center text-lg text-white/80"
         >
-          From developer to team lead, building enterprise-grade solutions. Two flagship projects
-          showcase my technical evolution and embrace of modern development practices including
-          AI-assisted development.
+          From developer to team lead and top contributor of the Affectli frontend — platform
+          designers, security, data pipelines, customer solutions and AI-built products. Experience
+          across process automation, GIS, IoT, compliance and telecom operations.
         </motion.p>
 
         <div className="grid gap-8 lg:grid-cols-2">
@@ -64,7 +65,7 @@ export function MIC3Spotlight() {
                     transition={{ duration: 2, repeat: Infinity }}
                   >
                     <Bot className="h-3.5 w-3.5" />
-                    <span>{project.aiPercentage}% AI-Powered</span>
+                    <span>{project.aiPercentage ? `${project.aiPercentage}% AI-Powered` : 'AI-Powered'}</span>
                     <Sparkle className="h-3 w-3 text-white" delay={0.5} />
                   </motion.div>
                 )}
@@ -168,8 +169,8 @@ export function MIC3Spotlight() {
           </div>
           <p className="text-white/80">
             I leverage AI tools like Claude to accelerate development while maintaining high code quality.
-            ComplyRespond.ai demonstrates that AI-human collaboration can deliver production-ready enterprise
-            solutions efficiently — and keep evolving them into a second major version. The future of development is augmented by AI.
+            ComplyRespond.ai and the Telkom incident management system were built with Claude Code as part
+            of the team — from specs and plans to production code, tests and deployment. The future of development is augmented by AI.
           </p>
         </motion.div>
       </Container>

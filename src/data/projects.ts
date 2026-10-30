@@ -29,17 +29,18 @@ export const projects: Project[] = [
   },
   {
     id: 'affectli',
-    title: 'Affectli D&D Form Builder',
+    title: 'Affectli Platform Designers',
     description:
-      'Enterprise drag-and-drop form builder for B2B project at MI-C3. Allows users to create complex forms with full customization.',
-    role: 'Lead Developer',
-    tech: ['React', 'Redux', 'GraphQL',  'Flowable', 'bpmn.io', 'Bryntum', 'D&D API'],
+      'No-code tooling inside the Affectli enterprise platform: users design forms, business processes and data pipelines visually and run them in production.',
+    role: 'Lead Frontend Developer',
+    tech: ['React', 'Redux', 'GraphQL', 'bpmn-js', 'drawflow', 'Bryntum', 'Keycloak'],
     highlights: [
-      'Developed from scratch as main developer',
-      'Implemented complex drag & drop functionality',
-      'Built reusable form components library',
-      'Integrated with enterprise backend systems',
+      'Form Designer with 46 field types, versioning and import/export',
+      'BPMN Process Designer with scripts, listeners, gateways and versioning',
+      'Data Pipeline Designer & Monitor with live status',
+      'Security admin console on Keycloak',
     ],
+    link: 'https://affectli.com',
   },
   {
     id: 'wanderbeat',

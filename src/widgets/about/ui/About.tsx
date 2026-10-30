@@ -120,11 +120,11 @@ export function About() {
                 <div className="mb-3 flex items-center gap-2">
                   <Telescope className="h-5 w-5 text-white/80" />
                   <h3 className="text-lg font-semibold text-white">
-                    Currently Exploring
+                    Current Focus
                   </h3>
                 </div>
                 <p className="text-white/80">
-                  Claude API integrations, AI agent development, modern DevOps practices, and ways to make development teams more effective through AI collaboration.
+                  Building complete products from A to Z — idea, architecture, UX, frontend, backend, deployment and support — with AI agents as part of the team. Shipping faster without trading off quality.
                 </p>
               </div>
             </div>

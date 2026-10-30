@@ -5,10 +5,10 @@ export const personal = {
   location: 'Ukraine (Remote)',
   bio: `I've spent 16 years building software and helping teams do the same. Currently wearing two hats: Frontend Team Lead at MI-C3 International and Technical Co-founder at Reservble.com — a reservation platform I've built from scratch.
 
-What drives me? The endless curiosity to learn. I leverage AI tools like Claude to accelerate development while maintaining high code quality. ComplyRespond.ai, the compliance product I lead on the frontend, was built with ~95% AI assistance and is now in its second major version — proof that human-AI collaboration delivers production-ready solutions.`,
-  extendedBio: `At MI-C3, I lead the frontend team on Affectli — an ontology-based "Business Operating System" used in oil & gas, telecom, mining and security operations. My proudest achievements include architecting a drag-and-drop Form Builder with 50+ field types, building GraphQL architecture with 350+ operations, and implementing a BPMN Process Designer.
+What drives me? The endless curiosity to learn. I leverage AI tools like Claude to accelerate development while maintaining high code quality. ComplyRespond.ai, the compliance product I build on the frontend, was written ~95% with Claude Code — proof that human-AI collaboration delivers production-ready solutions.`,
+  extendedBio: `At MI-C3, I lead the frontend of Affectli — an ontology-based "Business Operating System" used in oil & gas, telecom, mining and security operations — and I'm its top frontend contributor. I built the platform's Form, BPMN Process and Data Pipeline designers, its Keycloak security console, and delivered products on top of it: ComplyRespond.ai and a telco incident management system for Telkom with digital twins and LLM agents.
 
-I embrace modern development practices: AI-assisted coding, comprehensive testing with Playwright, and staying ahead of emerging technologies. The future of development is augmented by AI — and I'm ready for it.`,
+I embrace modern development practices: AI-assisted coding with Claude Code, comprehensive testing with Playwright, and owning products end to end.`,
   email: 'pranaboy13@gmail.com',
   linkedin: 'https://linkedin.com/in/bkitaec',
   github: 'https://github.com/bkitaec',
