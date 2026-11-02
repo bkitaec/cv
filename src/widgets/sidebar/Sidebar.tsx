@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { EnvelopeSimple, GithubLogo, Globe, LinkedinLogo, MapPin } from '@phosphor-icons/react/dist/ssr'
 import { personal, topSkills } from '@/data'
 import { Chip } from '@/shared/ui'
@@ -5,6 +6,7 @@ import { PrintButton } from '@/features/print/PrintButton'
 import { ThemeToggle } from '@/features/theme-toggle/ThemeToggle'
 import { CommandHint } from '@/features/command-palette/CommandPalette'
 import { SectionNav } from './SectionNav'
+import avatar from '@/shared/assets/avatar.webp'
 
 const links = [
   { href: `mailto:${personal.email}`, label: personal.email, icon: EnvelopeSimple },
@@ -17,9 +19,14 @@ export function Sidebar() {
   return (
     <aside className="space-y-8 lg:sticky lg:top-12 lg:max-h-[calc(100vh-6rem)] lg:self-start lg:overflow-y-auto lg:[scrollbar-width:none] print:static print:max-h-none">
       <div>
-        <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-fg font-mono text-lg font-semibold text-bg print:hidden">
-          DB
-        </div>
+        <Image
+          src={avatar}
+          alt="Portrait of Denys Bogdanov"
+          width={96}
+          height={96}
+          priority
+          className="mb-4 h-24 w-24 rounded-2xl border border-line object-cover print:h-20 print:w-20"
+        />
         <h1 className="bg-gradient-to-r from-black to-[#666666] bg-clip-text text-3xl font-semibold tracking-tight text-transparent dark:from-white dark:to-[#9b9b9b] print:bg-none print:text-black">
           {personal.name}
         </h1>
