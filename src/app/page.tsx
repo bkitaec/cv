@@ -19,7 +19,7 @@ export default function Home() {
       >
         Skip to content
       </a>
-      <div className="mx-auto max-w-6xl px-4 py-8 lg:px-8 lg:py-12 print:max-w-none print:p-0">
+      <div className="mx-auto max-w-6xl px-4 py-8 lg:px-8 lg:py-12 print:max-w-none print:px-[14mm] print:py-0">
         <div className="grid gap-12 lg:grid-cols-[280px_1fr] lg:gap-16 print:block">
           <Sidebar />
           <main id="content" className="min-w-0 space-y-12 print:flex print:flex-col print:gap-6 print:space-y-0">

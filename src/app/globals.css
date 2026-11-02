@@ -125,9 +125,11 @@ li {
   }
 }
 
+/* Vertical margins repeat on every page; horizontal ones live in the layout
+   so they survive the browser's "Margins: None" print setting. */
 @page {
   size: A4;
-  margin: 14mm 12mm;
+  margin: 12mm 0;
 }
 
 @media print {
