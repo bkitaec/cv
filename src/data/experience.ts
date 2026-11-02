@@ -134,4 +134,20 @@ export const experiences: Experience[] = [
     ],
     skills: ['AngularJS', 'Ionic', 'Node.js', 'Sails.js', 'MySQL', 'WordPress'],
   },
+  {
+    id: 'newaion',
+    company: 'Newaion',
+    role: 'PHP Engineer',
+    period: 'Aug 2010 - Nov 2015',
+    location: 'Remote',
+    type: 'contract',
+    description:
+      'Lead developer of the web platform for an online MMORPG (Aion) game server on the Kohana PHP framework — the entire CMS, frontend and backend.',
+    achievements: [
+      'Online store and donations with payment integrations (ROBOKASSA, Interkassa)',
+      'Lottery, auction and vote rewards with external rating site integrations',
+      'Admin statistics dashboards, game account management and server log processing',
+    ],
+    skills: ['PHP', 'Kohana', 'MySQL', 'JavaScript', 'Payments'],
+  },
 ]

@@ -94,8 +94,9 @@ export const skillCategories: SkillCategory[] = [
 
 export const topSkills = [
   'React',
-  'Node.js',
-  'Claude AI',
+  'TypeScript',
   'GraphQL',
+  'Node.js',
+  'Claude Code',
   'Team Leadership',
 ]

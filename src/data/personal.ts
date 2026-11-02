@@ -9,6 +9,10 @@ What drives me? The endless curiosity to learn. I leverage AI tools like Claude 
   extendedBio: `At MI-C3, I lead the frontend of Affectli — an ontology-based "Business Operating System" used in oil & gas, telecom, mining and security operations — and I'm its top frontend contributor. I built the platform's Form, BPMN Process and Data Pipeline designers, its Keycloak security console, and delivered products on top of it: ComplyRespond.ai and a telco incident management system for Telkom with digital twins and LLM agents.
 
 I embrace modern development practices: AI-assisted coding with Claude Code, comprehensive testing with Playwright, and owning products end to end.`,
+  summary:
+    'Frontend Team Lead and product engineer with 16 years in web development. I lead the frontend of Affectli, an enterprise operations platform, co-founded Reservble.com, and build complete products from A to Z with AI agents as part of the team.',
+  openTo: 'Team Lead · Tech Lead · Engineering Manager · CTO',
+  website: 'https://bkitaec.github.io/cv/',
   email: 'pranaboy13@gmail.com',
   linkedin: 'https://linkedin.com/in/bkitaec',
   github: 'https://github.com/bkitaec',

@@ -1,27 +1,42 @@
-import { Header } from '@/widgets/header'
-import { Hero } from '@/widgets/hero'
-import { About } from '@/widgets/about'
-import { MIC3Spotlight } from '@/widgets/mic3-spotlight'
-import { Experience } from '@/widgets/experience'
-import { Skills } from '@/widgets/skills'
-import { Projects } from '@/widgets/projects'
-import { Contact } from '@/widgets/contact'
-import { Footer } from '@/widgets/footer'
+import { Sidebar } from '@/widgets/sidebar/Sidebar'
+import { Summary } from '@/widgets/summary/Summary'
+import { CareerTimeline } from '@/widgets/career-timeline/CareerTimeline'
+import { Experience } from '@/widgets/experience/Experience'
+import { Projects } from '@/widgets/projects/Projects'
+import { Skills } from '@/widgets/skills/Skills'
+import { Activity } from '@/widgets/activity/Activity'
+import { CommandPalette } from '@/features/command-palette/CommandPalette'
+import { lastUpdated } from '@/data'
 
 export default function Home() {
+  const updated = new Date(`${lastUpdated}-01`).toLocaleDateString('en-US', { month: 'long', year: 'numeric' })
+
   return (
     <>
-      <Header />
-      <main>
-        <Hero />
-        <About />
-        <MIC3Spotlight />
-        <Experience />
-        <Skills />
-        <Projects />
-        <Contact />
-      </main>
-      <Footer />
+      <a
+        href="#content"
+        className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-lg focus:bg-fg focus:px-3 focus:py-2 focus:text-bg"
+      >
+        Skip to content
+      </a>
+      <div className="mx-auto max-w-6xl px-4 py-8 lg:px-8 lg:py-12 print:max-w-none print:p-0">
+        <div className="grid gap-12 lg:grid-cols-[280px_1fr] lg:gap-16 print:grid-cols-[200px_1fr] print:gap-8">
+          <Sidebar />
+          <main id="content" className="min-w-0 space-y-12">
+            <Summary />
+            <CareerTimeline />
+            <Experience />
+            <Projects />
+            <Skills />
+            <Activity />
+          </main>
+        </div>
+        <footer className="mt-16 flex flex-wrap justify-between gap-2 border-t border-line pt-6 text-xs text-subtle print:hidden">
+          <span>© {lastUpdated.slice(0, 4)} Denys Bogdanov · Updated {updated}</span>
+          <span>Built with Next.js, Tailwind and Claude Code</span>
+        </footer>
+      </div>
+      <CommandPalette />
     </>
   )
 }
