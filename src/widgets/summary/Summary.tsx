@@ -8,16 +8,16 @@ const metrics = [
   { value: '~95', unit: '%', label: 'of ComplyRespond.ai written with Claude Code' },
 ]
 
-export function Summary() {
+export function Summary({ className }: { className?: string }) {
   return (
-    <Section id="summary" title="Summary">
-      <p className="max-w-[680px] text-lg text-fg">{personal.summary}</p>
-      <dl className="mt-6 grid grid-cols-2 gap-px overflow-hidden rounded-xl border border-line bg-line md:grid-cols-4">
+    <Section id="summary" className={className} title="Summary">
+      <p className="max-w-[680px] text-lg text-fg print:max-w-none print:text-base">{personal.summary}</p>
+      <dl className="mt-6 print:mt-3 grid grid-cols-2 gap-px overflow-hidden rounded-xl border border-line bg-line md:grid-cols-4 print:grid-cols-4">
         {metrics.map((m) => (
-          <div key={m.label} className="bg-surface p-4">
+          <div key={m.label} className="bg-surface p-4 print:p-2">
             <dt className="sr-only">{m.label}</dt>
             <dd>
-              <span className="font-mono text-3xl font-semibold tracking-tight text-fg">
+              <span className="font-mono text-3xl font-semibold tracking-tight print:text-xl text-fg">
                 {m.value}
                 <span className="text-xl text-subtle">{m.unit}</span>
               </span>

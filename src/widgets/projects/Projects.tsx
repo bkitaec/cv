@@ -44,14 +44,14 @@ const cards: Card[] = [
     : []),
 ]
 
-export function Projects() {
+export function Projects({ className }: { className?: string }) {
   return (
-    <Section id="projects" title="Selected projects" aside={`${cards.length} products`}>
-      <div className="grid gap-4 md:grid-cols-2">
+    <Section id="projects" className={className} title="Selected projects" aside={`${cards.length} products`}>
+      <div className="grid gap-4 md:grid-cols-2 print:grid-cols-2 print:gap-3">
         {cards.map((c) => (
           <article
             key={c.id}
-            className="group flex flex-col rounded-2xl border border-line bg-surface p-4 transition-transform duration-500 ease-out-soft hover:-translate-y-0.5"
+            className="group flex flex-col rounded-2xl border border-line bg-surface p-4 print:p-3 [break-inside:avoid] transition-transform duration-500 ease-out-soft hover:-translate-y-0.5"
           >
             <header className="flex items-start justify-between gap-2">
               <div className="min-w-0">

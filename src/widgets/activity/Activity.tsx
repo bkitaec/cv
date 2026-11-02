@@ -8,9 +8,9 @@ const LEVELS = ['bg-surface-2', 'bg-accent/25', 'bg-accent/45', 'bg-accent/70', 
 const level = (n: number) => (n === 0 ? 0 : Math.min(4, Math.ceil((n / max) * 4)))
 
 /** GitHub-style contribution grid built from real git history. */
-export function Activity() {
+export function Activity({ className }: { className?: string }) {
   return (
-    <Section id="activity" title="Commit activity" aside={`${activityTotal.toLocaleString('en-US')} since 2020`}>
+    <Section id="activity" className={className} title="Commit activity" aside={`${activityTotal.toLocaleString('en-US')} since 2020`}>
       <div className="overflow-x-auto rounded-xl border border-line bg-surface p-4">
         <table className="w-full min-w-[420px] table-fixed border-separate border-spacing-1">
           <caption className="sr-only">Commits and merges per month, 2020 to 2026</caption>

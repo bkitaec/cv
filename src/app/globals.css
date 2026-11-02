@@ -144,14 +144,17 @@ li {
     --accent-soft: #ede9fe;
   }
   html {
-    font-size: 13px;
+    font-size: 12px;
   }
   .reveal {
     opacity: 1 !important;
     transform: none !important;
   }
-  article,
-  section > div {
+  /* Keep small blocks whole; let long sections flow across pages */
+  li,
+  dl > div,
+  table,
+  #career > div:last-child {
     break-inside: avoid;
   }
   * {

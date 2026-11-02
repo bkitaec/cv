@@ -19,7 +19,7 @@ const fmt = (ym: string) =>
   new Date(`${ym}-01`).toLocaleDateString('en-US', { month: 'short', year: 'numeric' })
 
 /** Gantt-style career overview: overlapping roles are visible at a glance. */
-export function CareerTimeline() {
+export function CareerTimeline({ className }: { className?: string }) {
   const ref = useRef<HTMLDivElement>(null)
   const [shown, setShown] = useState(false)
 
@@ -37,7 +37,7 @@ export function CareerTimeline() {
   }, [])
 
   return (
-    <Section id="career" title="Career timeline" aside="2010 → today">
+    <Section id="career" className={className} title="Career timeline" aside="2010 → today">
       <div ref={ref} className="rounded-xl border border-line bg-surface p-4">
         <div className="relative ml-0 sm:ml-44">
           <div className="relative h-5 text-xs text-subtle">

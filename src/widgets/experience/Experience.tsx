@@ -37,18 +37,18 @@ function Role({ item, compact }: { item: ExperienceItem; compact?: boolean }) {
   )
 }
 
-export function Experience() {
+export function Experience({ className }: { className?: string }) {
   const main = experiences.filter((e) => !EARLIER.has(e.id))
   const earlier = experiences.filter((e) => EARLIER.has(e.id))
 
   return (
-    <Section id="experience" title="Experience" aside={`${experiences.length} roles`}>
-      <div className="space-y-8">
+    <Section id="experience" className={className} title="Experience" aside={`${experiences.length} roles`}>
+      <div className="space-y-8 print:space-y-4">
         {main.map((item) => (
           <Role key={item.id} item={item} />
         ))}
       </div>
-      <div className="mt-8 rounded-xl border border-line bg-surface p-4">
+      <div className="mt-8 rounded-xl border border-line bg-surface p-4 print:mt-4 print:p-3">
         <h3 className="mb-4 text-xs font-semibold uppercase tracking-widest text-subtle">Earlier, 2010 — 2018</h3>
         <div className="space-y-4">
           {earlier.map((item) => (

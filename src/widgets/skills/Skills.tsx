@@ -1,10 +1,11 @@
 import { skillCategories } from '@/data'
 import { Chip, Section } from '@/shared/ui'
 
-export function Skills() {
+export function Skills({ className }: { className?: string }) {
   return (
     <Section
       id="skills"
+      className={className}
       title="Skills"
       aside={
         <span className="inline-flex items-center gap-2">
