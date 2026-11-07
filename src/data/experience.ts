@@ -28,7 +28,7 @@ export const experiences: Experience[] = [
       'Built the Keycloak security admin console: auth flows, identity/OpenID providers, tokens, OTP, brute-force protection',
       'Ontology & entity UI, relationship graphs, permissions and sharing, Bryntum grids and task boards, print templates',
       'Engineering health: removed Flow from 1,400+ files, dropped PrimeReact, moved builds to Rspack',
-      'Main frontend developer of ComplyRespond.ai — ~95% of the code written with Claude Code',
+      'Main developer of ComplyRespond.ai: Claude agent assistant (orchestrator + 4 subagents), automatic AI questionnaire review, ECharts risk analytics, OWASP-driven security fixes — ~95% written with Claude Code',
       'Telkom: migrated the NOC UI to TypeScript, built digital twins, Command Centre and six LLM agents',
       'Migrated the platform E2E suite from Puppeteer to Playwright; maintain the shared component library',
     ],

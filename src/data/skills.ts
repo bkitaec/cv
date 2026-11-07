@@ -22,6 +22,8 @@ export const skillCategories: SkillCategory[] = [
       { name: 'HTML5/CSS3', level: 'expert' },
       { name: 'JavaScript (ES6+)', level: 'expert' },
       { name: 'GraphQL / Apollo', level: 'expert' },
+      { name: 'Data Visualization (ECharts)', level: 'advanced' },
+      { name: 'Web Security (OWASP Top 10)', level: 'advanced' },
     ],
   },
   {
@@ -74,7 +76,8 @@ export const skillCategories: SkillCategory[] = [
       { name: 'Claude Code CLI', level: 'expert' },
       { name: 'Claude Subagents', level: 'expert' },
       { name: 'MCP Servers', level: 'advanced' },
-      { name: 'LLM Agents', level: 'advanced' },
+      { name: 'LLM Agents & Agentic Workflows', level: 'advanced' },
+      { name: 'RAG', level: 'intermediate' },
       { name: 'Prompt Engineering', level: 'expert' },
       { name: 'AI-Assisted Development', level: 'expert' },
     ],
